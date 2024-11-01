@@ -1,0 +1,40 @@
+@media screen and (max-width:1024px){
+
+    .portada {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .contenido {
+        width: 80%;
+    }
+
+    .portada .imagen img {
+        width: 450px;
+    }
+
+    .productos{
+        margin-top: 50px;
+    }
+    
+}
+
+
+@media screen and (max-width:576px){
+
+    .contenido {
+        width: 90%;
+    }
+
+    .portada .title {
+        font-size: 30px;
+    }
+
+    .portada .imagen{
+        margin-top: 30px;
+    }
+    .portada .imagen img {
+        width: 320px;
+    }
+    
+}
