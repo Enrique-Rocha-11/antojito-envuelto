@@ -40,7 +40,7 @@
     <h1 class="logo montNormal" data-aos="fade-up">Antojito Envuelto</h1>
    
     <!-- Menu de navegacion -->
-    <nav class="nav flexbox end" data-aos="fade-up">
+    <nav class="nav flexbox end" data-aos="fade-up" id="nav">
 
         <div class="burguer" id="burguer">
             <button class="menu__icon">
@@ -51,13 +51,13 @@
           </div>
 
         <ul class="ui menu montNormal">
-            <li class="we-600"> <a href="">Inicio</a></li>
-            <li class="we-600"> <a href="">Tamales</a> </li>
-            <li class="we-600"> <a href="">Contacto</a> </li>
+            <li class="we-600"> <a href="#inicio">Inicio</a></li>
+            <li class="we-600"> <a href="#tamales">Tamales</a> </li>
+            <li class="we-600"> <a href="#contacto">Contacto</a> </li>
         </ul>
     </nav>
 
-    <div class="portada relative flexbox center">
+    <div class="portada relative flexbox center" id="inicio">
 
         <div class="contenido" data-aos="fade-up">
             <h2 class="title montNormal"><span>Antojito</span> <span>Envuelto</span></h2>
@@ -232,6 +232,10 @@
             </div>           
         </div>
     </div>
+
+    <div class="contacto" id="contacto">
+
+    </div>
   
 
     <div class="up" id="up">
@@ -271,7 +275,7 @@
     })
 
     document.getElementById("burguer").addEventListener("click", () => {
-        document.getElementById("burguer").classList.toggle("active");
+        document.getElementById("nav").classList.toggle("active");
     })
 </script>
 

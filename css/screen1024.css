@@ -19,6 +19,46 @@
     
 }
 
+@media screen and (max-width: 768px) {
+
+    .nav{
+        position: relative;
+        overflow: visible;
+    }
+
+    .nav.active .menu{
+        height: 123px;
+        opacity: 1;
+    }
+
+    .nav .menu{
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background: var(--background-white);
+        padding-inline-start: 0;
+        margin-block-start: 0;
+        height: 0;
+        opacity: 0;
+        transition: .4s;
+
+    }
+    .nav .menu li{
+        display: grid;
+        height: 40px;
+        place-items: center left;
+    }
+    .burguer{
+      width: 45px;
+      height: 45px;
+      opacity: 1;
+      pointer-events: fill;
+    }
+      
+    }
+    
+
 
 @media screen and (max-width:576px){
 
