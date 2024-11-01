@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <!--Page Title-->
+    <title>Habibi | Productos profesionales</title>
+
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./logo.jpeg" title="Favicon" />
+
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Namari Color CSS -->
+    <link rel="stylesheet" href="css/namari-color.css">
+
+    <!--Icon Fonts - Font Awesome Icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Animate CSS-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <!--Google Webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <div class="imagen">
+        <img src="../img/WhatsApp Image 2024-07-16 at 6.30.59 PM.jpeg" alt="">
+
+        <div class="cont-boton">
+            <button id="boton">Copiar numero de cuenta</button>
+        </div>
+      
+    </div>
+
+    <a class="whats" href="https://api.whatsapp.com/send?phone=5539131538&text=Te%20estás%20comunicando%20con
+    %20__Habibi%20productos%20profesionales__,%20estamos%20encantados%20de%20atenderte,%20en%20breve%20nos%20ponemos%20en%20contacto%20contigo." target="_blank">
+      <img src="../img/whatsapp.png" alt="Logo de whatsapp">
+    </a>
+
+</body>
+
+<style>
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url('../Quicksand-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    body{
+        background-color: #E6DAE8;
+    }
+
+    .imagen{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    img{
+
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+
+    }
+
+    .cont-boton{
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    button{
+        padding: 12px 20px;
+        color: white;
+        background: #B44981;
+        transform: translateY(-50px);
+        border-radius: 25px;
+        border: none;
+        text-align: center;
+        font-family: 'MiFuente';
+        font-size: 16px;
+        padding-bottom: 14px;
+        cursor: pointer;
+    }
+
+    .whats{
+      position: fixed;
+      bottom: 50px;
+      right: 30px;
+      width: 59px;
+      height: 45px;
+      cursor: pointer;
+    }
+
+  @media screen and (max-width: 576px) {
+    
+    .whats{
+      bottom: 40px;
+      right: 20px;
+      width: 64px;
+      height: 50px;
+    }
+  }
+</style>
+
+<script>
+
+
+const click = () => {
+
+    document.getElementById("boton").addEventListener("click", (event) => {
+
+navigator.clipboard.writeText("012180015852474004").then(() => {
+    console.log('012180015852474004');
+
+    alert("Nuestra cuenta ha sido copiada correctamente")
+}).catch(err => {
+    alert("No se pudo copiar la cuenta, por favor intente de nuevo")
+    console.error('Error al copiar el texto al portapapeles: ', err);
+})
+})
+}
+
+
+click();
+
+
+    
+</script>
+
+</html>

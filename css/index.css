@@ -1,0 +1,303 @@
+.nav{
+    background: var(--background-white);
+    padding:5px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.logo {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 15px;
+    z-index: 3;
+    color: var(--white);
+    
+}
+
+
+ .logo.aos-animate{
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    transition: top 0.8s ease, left 0.8s ease, transform 0.8s ease, color 0.8s ease;
+    transition-delay: 1s;
+    color: var(--dark);
+}
+
+.nav li{
+    transform: translateX(300%);
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.nav.aos-animate li{
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: 1.5s;
+}
+
+.nav .menu li{
+    display: inline-block;
+    margin: 0 5px;
+}
+.nav .menu li a{
+    padding: 5px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.menu{
+    list-style: none;
+}
+
+.portada {
+    width: 100%;
+    height: 400px;
+    background: var(--background-white);
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.contenido {
+    width: 500px;
+}
+
+.contenido *{
+    transform: translateY(100%);
+    opacity: 0;
+    transition: .8s ease;
+}
+.contenido.aos-animate *{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 1.5s;
+}
+
+.enlace{
+    width: 100%;
+    height: 100%;
+    padding: 9px 15px;
+    text-decoration: none;
+    color: white;
+    text-align: left;
+}
+
+.portada .title {
+    width: 100%;
+    font-size: 48px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 20px 0;
+}
+.portada .text {
+    width: 100%;
+    font-size: 18px;
+}
+
+.portada .imagen {
+    width: auto;
+}
+
+.portada .imagen img {
+    width: 450px;
+    border-radius: 50%;
+    object-fit: fill;
+    transition: .3s;
+    opacity: 0;
+}
+
+
+.portada .imagen img.aos-animate {
+    transition-delay: 1.5s;
+    opacity: 1;
+    transform: scale(1.01) translateZ(20px); /* Agranda la imagen y la acerca */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Agrega una sombra para efecto de profundidad */
+}
+
+
+.up{
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background: #ecebeb;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.up img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productos{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.productos .subtitle{
+    font-size: 22px;
+}
+.productos .text{
+    font-size: 18px;
+}
+
+
+.tamales{
+    gap: 10px;
+    margin: 80px 0;
+}
+
+.tamales .tamal{
+    width: 275px;
+    padding: 15px;
+    margin-bottom: 70px;
+    opacity: 0;
+    transition: .8s;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    
+}
+.tamales .tamal .imagen{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    transition: border 2s;
+
+}
+.tamales .tamal .imagen img{
+    width: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translateY(0) rotate(45deg);
+    transition: 1s;
+
+}
+
+.tamales .tamal .nombre{
+   font-size: 20px;
+   font-weight: 700;
+    
+}
+.tamales .tamal .text{
+   font-size: 14px;
+}
+
+.tamal .nombre,.text-tamal,.stars{
+    transform: translateY(-25px);
+}
+
+.tamal.aos-animate {
+    opacity: 1;
+}
+.tamal.aos-animate .imagen img{
+    transform: translateY(-50px) rotate(0);
+}
+
+
+.stars{
+    margin: auto;
+    gap: 5px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    filter: grayscale(1);
+}
+
+
+ /* Contenedor principal */
+ .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffe5b4;
+    perspective: 2000px;
+}
+
+/* Base del tamal */
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #d4a374;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Envolturas con patrón */
+.envoltura {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: transform 0.8s ease;
+    transform-origin: center;
+    background-color: #2e5033; /* Verde oscuro */
+    background-image: linear-gradient(to right, #6e4722 4px, transparent 4px),
+                      linear-gradient(to right, #6e4722 4px, transparent 4px);
+    background-size: 20px 100%;
+    z-index: 1;
+}
+
+/* Capas específicas */
+.envoltura-3 {
+    transform-origin: left;
+    transition-delay: .8s;
+    background-color: #355e3b; /* Verde oscuro */
+}
+
+.envoltura-4 {
+    transform-origin: right;
+    transition-delay: 0.4s;
+}
+
+/* Efecto al hacer hover en la caja */
+body .envoltura-3.aos-animate {
+    transform: rotateY(90deg) translateZ(-100px);
+}
+body .envoltura-4.aos-animate {
+    transform: rotateY(-90deg) translateZ(-100px);
+}
+
+
