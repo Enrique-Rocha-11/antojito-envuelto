@@ -22,13 +22,25 @@
 @media screen and (max-width: 768px) {
 
     .nav{
-        position: relative;
         overflow: visible;
     }
 
     .nav.active .menu{
         height: 123px;
         opacity: 1;
+        pointer-events: fill;
+    }
+
+    .nav.active li{
+        opacity: 1;
+    }
+
+    nav .menu li a {
+        width: 100%;
+        height: 100%;
+        border: 1px solid gold;
+        display: grid;
+        place-items: center left;
     }
 
     .nav .menu{
@@ -39,6 +51,7 @@
         background: var(--background-white);
         padding-inline-start: 0;
         margin-block-start: 0;
+        pointer-events: none;
         height: 0;
         opacity: 0;
         transition: .4s;
@@ -48,6 +61,7 @@
         display: grid;
         height: 40px;
         place-items: center left;
+       
     }
     .burguer{
       width: 45px;

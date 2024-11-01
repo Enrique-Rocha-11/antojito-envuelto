@@ -50,10 +50,10 @@
             </button>
           </div>
 
-        <ul class="ui menu montNormal">
-            <li class="we-600"> <a href="#inicio">Inicio</a></li>
-            <li class="we-600"> <a href="#tamales">Tamales</a> </li>
-            <li class="we-600"> <a href="#contacto">Contacto</a> </li>
+        <ul class="ui menu montNormal" id="menu">
+            <li class="opcion we-600"> <a class="opcion" href="#inicio">Inicio</a></li>
+            <li class="opcion we-600"> <a class="opcion" href="#tamales">Tamales</a> </li>
+            <li class="opcion we-600"> <a class="opcion" href="#contacto">Contacto</a> </li>
         </ul>
     </nav>
 
@@ -277,6 +277,23 @@
     document.getElementById("burguer").addEventListener("click", () => {
         document.getElementById("nav").classList.toggle("active");
     })
+
+    document.getElementById("menu").addEventListener("click", (ev) => {
+
+        console.log(ev);
+        if(ev.target.classList.contains("opcion")){
+            document.getElementById("nav").classList.remove("active"); 
+        }
+    })
+
+
+    function adjustScroll(event) {
+    // Agrega un retraso para que la transición termine antes de ajustar el scroll
+    setTimeout(() => {
+      // Desplaza la ventana 50px hacia arriba
+      window.scrollBy(0, -55);
+    }, 500); // Cambia 500ms si la transición tarda más o menos
+  }
 </script>
 
 

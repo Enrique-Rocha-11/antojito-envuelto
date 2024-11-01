@@ -10,7 +10,19 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
+
+  #inicio {
+    scroll-margin-top: 62px; /* Ajusta este valor según la altura de tu nav */
+  }
+  #tamales {
+    scroll-margin-top: 62px; /* Ajusta este valor según la altura de tu nav */
+  }
+
+  #contacto{
+    scroll-margin-top: 62px; /* Ajusta este valor según la altura de tu nav */
+  }
+
   *{
     box-sizing: border-box;
   }
